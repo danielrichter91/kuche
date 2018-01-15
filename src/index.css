@@ -1,0 +1,224 @@
+/* css reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+/* font */
+body {
+  font-family: 'Montserrat', sans-serif; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Raleway', sans-serif; }
+
+/* misc */
+.container {
+  width: calc(100% - 40px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.flex {
+  display: flex; }
+
+.justify-content {
+  justify-content: space-between; }
+
+.justify-content-center {
+  justify-content: center; }
+
+.align-items {
+  align-items: center; }
+
+.feature-background {
+  background: url("img/feature-img.jpeg") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh; }
+
+/* header */
+.header {
+  height: 60px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.logo-text {
+  margin: 0;
+  font-family: 'Pacifico', cursive;
+  font-size: 34px;
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold; }
+
+.top-link {
+  color: #000000;
+  text-decoration: none;
+  text-align: right; }
+
+.header.dark {
+  background: #000000; }
+
+.header.dark .logo-text, .header.dark .top-link {
+  color: #FFF; }
+
+/* content */
+.content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 700px; }
+
+.recipe-img {
+  width: 600px;
+  margin: 0 auto; }
+
+.recipe-img img {
+  width: 100%; }
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+  padding-top: 40px;
+  padding-bottom: 40px; }
+
+.ingredients {
+  width: calc(30% - 40px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  padding: 20px; }
+
+.ingredients-list {
+  padding: 0 0 0 15px; }
+
+.ingredients-item {
+  list-style: none;
+  padding: 10px 0; }
+
+.ingredients-item.checked {
+  text-decoration: line-through;
+  color: #DDDDDD; }
+
+.ingredients h2 {
+  margin-top: 0; }
+
+.method {
+  width: calc(70% - 30px);
+  padding-left: 30px; }
+
+.method-step {
+  border-bottom: 1px solid #DDDDDD; }
+
+.recipe-title {
+  font-size: 45px;
+  text-align: center; }
+
+/* home */
+.main-text {
+  text-align: center;
+  margin-top: 130px; }
+
+.main-text h1 {
+  font-size: 45px;
+  margin-bottom: 0; }
+
+.recipe-list-wrapper {
+  background: #DDDDDD;
+  padding: 50px 0; }
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+  overflow: hidden; }
+
+.card img {
+  height: 100%; }
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+
+/* recipes */
+.recipe-list {
+  padding-right: 40px; }
+
+.recipe-item {
+  list-style: none;
+  padding: 20px 0;
+  display: flex;
+  border-bottom: 1px solid #DDDDDD; }
+
+.recipe-item a {
+  color: #000000;
+  text-decoration: none; }
+
+.recipe-item p {
+  margin: 0; }
+
+.recipe-thumbnail {
+  width: 70px;
+  padding-right: 20px; }
+
+.recipe-thumbnail img {
+  width: 100%; }
+
+/* related recipes */
+.related-recipes-title {
+  margin-left: 20px;
+  margin-bottom: 0; }
+
+.related-recipes-list {
+  display: flex;
+  padding: 0; }
+
+.related-recipes-item {
+  list-style: none;
+  margin: 10px;
+  padding: 10px;
+  text-align: center; }
+
+.related-recipes-item a {
+  text-decoration: none;
+  color: #000000; }
+
+.related-recipes-img {
+  max-width: 100%;
+  overflow: hidden; }
+
+.related-recipes-img:hover img {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); }
+
+.related-recipes-img img {
+  max-width: 100%;
+  display: block;
+  -moz-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s; }
+
+/* button */
+.button {
+  background: #000000;
+  border-radius: 4px;
+  padding: 12px 40px;
+  color: #FFF;
+  text-decoration: none;
+  margin: 10px;
+  transition: all 150ms linear; }
+
+.button:hover {
+  transition: all 150ms linear;
+  opacity: 0.85; }
+
+/* footer */
+.footer {
+  background: #DDDDDD;
+  height: 100px; }
