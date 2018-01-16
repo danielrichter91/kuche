@@ -1,0 +1,37 @@
+{
+    "version": "1",
+    "recipes": [
+        {
+            "id": "1",
+            "title": "Buckwheat pancakes with maple syrup",
+            "image": "pexels-photo-376464-min.jpeg",
+            "ingredients": [
+                "3/4 cup buckwheat flour",
+                "3/4 cup white spelt flour",
+                "3 teaspoons baking powder",
+                "1 teaspoon ground cinnamon",
+                "3/4 cup mashed banana",
+                "1 egg",
+                "1/4 cup maple syrup, plus extra to serve",
+                "3/4 cup milk",
+                "unsalted butter, to grease the pan",
+                "store-bought vanilla bean yoghurt, to serve",
+                "extra banana, sliced, to serve"
+            ],
+            "method": [
+                {
+                    "step": "1",
+                    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor eius molestias earum animi, ea exercitationem! Suscipit doloremque, facilis, dolorem recusandae corporis aut temporibus fugit, delectus vero fuga quis ut commodi!"
+                },
+                {
+                    "step": "2",
+                    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor eius molestias earum animi, ea exercitationem! Suscipit doloremque, facilis, dolorem recusandae corporis aut temporibus fugit, delectus vero fuga quis ut commodi!"
+                },
+                {
+                    "step": "3",
+                    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor eius molestias earum animi, ea exercitationem! Suscipit doloremque, facilis, dolorem recusandae corporis aut temporibus fugit, delectus vero fuga quis ut commodi!"
+                }
+            ]
+        }
+    ]
+}

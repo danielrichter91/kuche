@@ -16,7 +16,7 @@ class Recipes extends Component {
                     <li className='recipe-item'>
                         <a href='content.html' className='flex align-items'>
                             <div className='recipe-thumbnail'>
-                                <img src={imageOne} alt='#' />
+                                <img src={imageOne} alt='image-thumbnail' />
                             </div>
                             <p>Buckwheat pancakes with maple syrup</p>
                         </a>
@@ -24,7 +24,7 @@ class Recipes extends Component {
                     <li className='recipe-item'>
                         <a href='#' className='flex align-items'>
                             <div className='recipe-thumbnail'>
-                                <img src={imageTwo} alt='#' />
+                                <img src={imageTwo} alt='image-thumbnail' />
                             </div>
                             <p>Buckwheat pancakes with maple syrup</p>
                         </a>
@@ -32,7 +32,7 @@ class Recipes extends Component {
                     <li className='recipe-item'>
                         <a href='#' className='flex align-items'>
                             <div className='recipe-thumbnail'>
-                                <img src={imageThree} alt='#' />
+                                <img src={imageThree} alt='image-thumbnail' />
                             </div>
                             <p>Buckwheat pancakes with maple syrup</p>
                         </a>

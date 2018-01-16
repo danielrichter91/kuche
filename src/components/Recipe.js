@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import imageOne from '../img/pexels-photo-376464-min.jpeg';
+import RecipeData from '../data/data';
 
 class Recipe extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            pageId: undefined
+            pageId: undefined,
+            pageData: undefined
         };
     }
+    
     componentDidMount = () => {
         this.setState({
             pageId: this.props.match.params.id
         })
+        RecipeData.recipes.map((x, i) => {
+            if (x.id === this.props.match.params.id) {
+                this.setState({ pageData: x });   
+            }
+        })
     }
+    
+    getImage = () => {
+        if (this.state.pageData) {
+            var imgUrl = require(`../img/${this.state.pageData.image}`);
+            return imgUrl;
+        }
+        return
+    }
+
     render() {
+        var title = this.state.pageData ? this.state.pageData.title : undefined;
+        var image = this.getImage()
     return (
     <div>
         <Header headerColor='dark' />
         <div className='container'>
             <div className='content'>
-                <h1 className='recipe-title'>Buckwheat pancakes with maple syrup</h1>
+                <h1 className='recipe-title'>{title}</h1>
                 <div className='recipe-img'>
-                    <img src={imageOne} alt='main-photo' />
+                    <img src={image} alt='main-photo' />
                 </div>
                 <div className='main-content'>
                     <div className='ingredients'>
@@ -68,7 +86,7 @@ class Recipe extends Component {
                             <a href='#'>
                                 <h5>Buckwheat pancakes with maple syrup</h5>
                                 <div className='related-recipes-img'>
-                                    <img src={imageOne} alt='related-photo' />
+                                    <img src={image} alt='related-photo' />
                                 </div>
                             </a>
                         </li>
@@ -76,7 +94,7 @@ class Recipe extends Component {
                             <a href='#'>
                                 <h5>Buckwheat pancakes with maple syrup</h5>
                                 <div className='related-recipes-img'>
-                                    <img src={imageOne} alt='related-photo' />
+                                    <img src={image} alt='related-photo' />
                                 </div>
                             </a>
                         </li>
@@ -84,7 +102,7 @@ class Recipe extends Component {
                             <a href='#'>
                                 <h5>Buckwheat pancakes with maple syrup</h5>
                                 <div className='related-recipes-img'>
-                                    <img src={imageOne} alt='related-photo' />
+                                    <img src={image} alt='related-photo' />
                                 </div>
                             </a>
                         </li>

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 class Header extends Component {
   render() {
-    var headerClass = 'header' + ' ' + this.props.headerColor;
+    var headerClass = 'header ' + this.props.headerColor;
     return (
         <div className={headerClass}>
             <div className='container flex justify-content align-items'>
