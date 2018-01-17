@@ -42,7 +42,7 @@ class Recipe extends Component {
                     <IngredientsList data={this.state.pageData} />
                     <Method data={this.state.pageData} />
                 </div>
-                <RelatedRecipes image={image} />
+                <RelatedRecipes data={RecipeData} />
             </div>
         </div>
     </div>

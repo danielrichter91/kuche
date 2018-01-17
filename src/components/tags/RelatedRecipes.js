@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { getImage } from '../../services/mixin';
 
 class RelatedRecipes extends Component {
     constructor(props) {
@@ -6,35 +7,23 @@ class RelatedRecipes extends Component {
         this.state = {};
     }
     render() {
-        var data = this.props.data ? this.props.data.method : [];
     return (
         <div className='related-recipes'>
             <h2 className='related-recipes-title'>Related recipes</h2>
             <ul className='related-recipes-list'>
-                <li className='related-recipes-item'>
-                    <a href='/'>
-                        <h5>Buckwheat pancakes with maple syrup</h5>
-                        <div className='related-recipes-img'>
-                            <img src={this.props.image} alt='related' />
-                        </div>
-                    </a>
-                </li>
-                <li className='related-recipes-item'>
-                    <a href='/'>
-                        <h5>Buckwheat pancakes with maple syrup</h5>
-                        <div className='related-recipes-img'>
-                            <img src={this.props.image} alt='related' />
-                        </div>
-                    </a>
-                </li>
-                <li className='related-recipes-item'>
-                    <a href='/'>
-                        <h5>Buckwheat pancakes with maple syrup</h5>
-                        <div className='related-recipes-img'>
-                            <img src={this.props.image} alt='related' />
-                        </div>
-                    </a>
-                </li>
+                {this.props.data.recipes.map((x, i) => {
+                    var linkUrl = '/recipes/' + x.id;
+                    return (
+                        <li key={i} className='related-recipes-item'>
+                            <a href={linkUrl}>
+                                <h5>{x.title}</h5>
+                                <div className='related-recipes-img'>
+                                    <img src={getImage(x.image)} alt='related' />
+                                </div>
+                            </a>
+                        </li>
+                    )
+                })}
             </ul>
         </div>
     );
