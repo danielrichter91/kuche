@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import imageOne from '../img/pexels-photo-376464-min.jpeg';
-import imageTwo from '../img/pexels-photo-376464-min.jpeg';
-import imageThree from '../img/pexels-photo-376464-min.jpeg';
+import RecipeData from '../data/data';
+import { getImage } from '../services/mixin';
 
 class Recipes extends Component {
-  render() {
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
+
+    render() {
     return (
     <div>
         <Header headerColor='dark' />
@@ -13,30 +18,19 @@ class Recipes extends Component {
             <div className='content'>
                 <h1 className='recipe-title'>Recipes</h1>
                 <ul className='recipe-list'>
-                    <li className='recipe-item'>
-                        <a href='content.html' className='flex align-items'>
-                            <div className='recipe-thumbnail'>
-                                <img src={imageOne} alt='image-thumbnail' />
-                            </div>
-                            <p>Buckwheat pancakes with maple syrup</p>
-                        </a>
-                    </li>
-                    <li className='recipe-item'>
-                        <a href='#' className='flex align-items'>
-                            <div className='recipe-thumbnail'>
-                                <img src={imageTwo} alt='image-thumbnail' />
-                            </div>
-                            <p>Buckwheat pancakes with maple syrup</p>
-                        </a>
-                    </li>
-                    <li className='recipe-item'>
-                        <a href='#' className='flex align-items'>
-                            <div className='recipe-thumbnail'>
-                                <img src={imageThree} alt='image-thumbnail' />
-                            </div>
-                            <p>Buckwheat pancakes with maple syrup</p>
-                        </a>
-                    </li>
+                    {RecipeData.recipes.map((x, i) => {
+                        var linkUrl = '/recipes/' + x.id;
+                        return (
+                            <li key={i} className='recipe-item'>
+                                <a href={linkUrl} className='flex align-items'>
+                                    <div className='recipe-thumbnail'>
+                                        <img src={getImage(x.image)} alt='thumbnail' />
+                                    </div>
+                                    <p>{x.title}</p>
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
             </div>
         </div>
