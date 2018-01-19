@@ -16,6 +16,12 @@ class Recipes extends Component {
         <Header headerColor='dark' />
         <div className='container'>
             <div className='content'>
+                <nav className="breadcrumb" aria-label="breadcrumbs">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li className="is-active">Recipes</li>
+                    </ul>
+                </nav>
                 <h1 className='recipe-title'>Recipes</h1>
                 <ul className='recipe-list'>
                     {RecipeData.recipes.map((x, i) => {

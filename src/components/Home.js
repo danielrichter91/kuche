@@ -18,32 +18,28 @@ class Home extends Component {
               <h1>From our home, to yours</h1>
               <p>All your favourite recipes, right where you need them</p>
           </div>
-      </div>
-      <div className='recipe-list-wrapper'>
-          <div className='container'>
-              <div className="card card-1">
-                  <img src={imageOne} alt='' />
-              </div>
-              <div className="card card-1">
-                  <img src={imageTwo} alt='' />
-              </div>
-              <div className="card card-1">
-                  <img src={imageThree} alt='' />
-              </div>
-              <div className="card card-1">
-                  <img src={imageFour} alt='' />
-              </div>
-              <div className="card card-1">
-                  <img src={imageFive} alt='' />
-              </div>
-              <div className="card card-1">
-                  <img src={imageSix} alt='' />
-              </div>
-              <div className='flex justify-content-center'>
-                  <Link className='button' to="/recipes">More Recipes</Link>
-              </div>
-          </div>
-      </div>
+        </div>
+        <div className='recipe-list-wrapper'>
+            <div className='container'>
+                <ul className='home-recipe-list'>
+                    <li><a href="">Buckwheat pancakes with maple syrup</a></li>
+                    <li><a href="">Wheat pancakes with chocolate syrup</a></li>
+                    <li><a href="">Wheat pancakes with fresh fruit</a></li>
+                    <li><a href="">Automotive Trades and Services</a></li>
+                    <li><a href="">Aviation and Maritime</a></li>
+                    <li><a href="">Building, Construction and Property</a></li>
+                    <li><a href="">Business and Finance</a></li>
+                    <li><a href="">Community Services</a></li>
+                    <li><a href="">Engineering and Electrotechnology</a></li>
+                    <li><a href="">Hairdressing and Beauty</a></li>
+                    <li><a href="">Health and Fitness</a></li>
+                    <li><a href="">Information and Communication Technology</a></li>
+                    <li><a href="">Library and Information Services</a></li>
+                    <li><a href="">Logistics and Warehousing</a></li>
+                    <li><a href="">Preparation for Work, Further Study and Pathways</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
     );
   }
