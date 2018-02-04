@@ -14,7 +14,7 @@ class RelatedRecipes extends Component {
                 {this.props.data.recipes.map((x, i) => {
                     var linkUrl = '/recipes/' + x.id;
                     return (
-                        <li key={i} className='related-recipes-item'>
+                        <li key={i} className='related-recipes-item'>                        
                             <a href={linkUrl}>
                                 <h5>{x.title}</h5>
                                 <div className='related-recipes-img'>

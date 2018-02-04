@@ -1,3 +1,3 @@
 export const getImage = (image) => {
-    return require(`../img/${image}`);;
+    return require(`../img/${image}`);
 }

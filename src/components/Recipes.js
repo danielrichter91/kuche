@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import imageOne from '../img/pexels-photo-376464-min.jpeg';
 import RecipeData from '../data/data';
@@ -18,8 +19,8 @@ class Recipes extends Component {
             <div className='content'>
                 <nav className="breadcrumb" aria-label="breadcrumbs">
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li className="is-active">Recipes</li>
+                        <li><Link to="/">Home</Link></li>
+                        <li className="is-active"><a href='#'>Recipes</a></li>
                     </ul>
                 </nav>
                 <h1 className='recipe-title'>Recipes</h1>
@@ -28,12 +29,12 @@ class Recipes extends Component {
                         var linkUrl = '/recipes/' + x.id;
                         return (
                             <li key={i} className='recipe-item'>
-                                <a href={linkUrl} className='flex align-items'>
+                                <Link className='flex align-items' to={linkUrl}>
                                     <div className='recipe-thumbnail'>
                                         <img src={getImage(x.image)} alt='thumbnail' />
                                     </div>
                                     <p>{x.title}</p>
-                                </a>
+                                </Link>
                             </li>
                         )
                     })}

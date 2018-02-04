@@ -8,7 +8,8 @@ class Header extends Component {
         <div className={headerClass}>
             <div className='container flex justify-content align-items'>
                 <div className='flex'>
-                    <a href="/" className='logo-text'>Kuche</a>
+                    {/* <a href="/" className='logo-text'>Kuche</a> */}
+                    <Link className='logo-text' to="/">Kuche</Link>
                 </div>
                 <div>
                     <Link className='top-link' to="/recipes">Recipes</Link>

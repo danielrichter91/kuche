@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
-import imageOne from '../img/food-salad-healthy-lunch-min.jpg';
-import imageTwo from '../img/pexels-photo-62097-min.jpeg';
-import imageThree from '../img/salad-healthy-diet-spinach-min.jpg';
-import imageFour from '../img/pexels-photo-376464-min.jpeg';
-import imageFive from '../img/pexels-photo-566566-min.jpeg';
-import imageSix from '../img/pexels-photo-704971-min.jpeg';
+import List from './tags/List';
+import Form from './tags/Form';
+// import imageOne from '../img/food-salad-healthy-lunch-min.jpg';
+// import imageTwo from '../img/pexels-photo-62097-min.jpeg';
+// import imageThree from '../img/salad-healthy-diet-spinach-min.jpg';
+// import imageFour from '../img/pexels-photo-376464-min.jpeg';
+// import imageFive from '../img/pexels-photo-566566-min.jpeg';
+// import imageSix from '../img/pexels-photo-704971-min.jpeg';
 
 class Home extends Component {
   render() {
@@ -21,6 +22,16 @@ class Home extends Component {
         </div>
         <div className='recipe-list-wrapper'>
             <div className='container'>
+            <div className="row mt-5">
+                <div className="col-md-4 offset-md-1">
+                <h2>Articles</h2>
+                <List />
+                </div>
+                <div className="col-md-4 offset-md-1">
+                <h2>Add a new article</h2>
+                <Form />
+                </div>
+            </div>
                 <ul className='home-recipe-list'>
                     <li><a href="">Buckwheat pancakes with maple syrup</a></li>
                     <li><a href="">Wheat pancakes with chocolate syrup</a></li>

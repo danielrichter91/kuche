@@ -116,10 +116,24 @@ h1, h2, h3, h4, h5 {
 
 .breadcrumb li {
   list-style: none; }
+  .breadcrumb li:before {
+    color: #4a4a4a;
+    content: "\0002f"; }
+  .breadcrumb li:first-child:before {
+    content: ""; }
+  .breadcrumb li:first-child a {
+    padding-left: 0; }
+  .breadcrumb li.is-active a {
+    color: #363636;
+    cursor: default;
+    pointer-events: none; }
 
 .breadcrumb a {
   color: #3273dc;
-  text-decoration: none; }
+  text-decoration: none;
+  padding: 0.5em 0.75em; }
+  .breadcrumb a:hover {
+    color: #363636; }
 
 /* home */
 .main-text {
